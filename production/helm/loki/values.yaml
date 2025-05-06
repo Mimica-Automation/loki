@@ -1685,6 +1685,12 @@ read:
   topologySpreadConstraints: []
   # -- Tolerations for read pods
   tolerations: []
+  # -- readiness probe settings for read pods. If empty, use `loki.readinessProbe`
+  readinessProbe: {}
+  # -- liveness probe settings for read pods. If empty use `loki.livenessProbe`
+  livenessProbe: {}
+  # -- startup probe settings for read pods. If empty use `loki.startupProbe`
+  startupProbe: {}
   # -- The default is to deploy all pods in parallel.
   podManagementPolicy: "Parallel"
   # -- read.persistence is used only if legacyReadTarget is set to true
